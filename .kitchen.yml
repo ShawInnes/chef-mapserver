@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+  gui: true
+  provider: vmware_fusion
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: windows2012r2
+
+suites:
+  - name: default
+    run_list:
+      - recipe[mapserver::default]
+    attributes:
